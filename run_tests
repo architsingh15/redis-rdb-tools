@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+import unittest
+from tests import all_tests
+
+
+if __name__ == "__main__":
+    tests = all_tests()
+    results = unittest.TextTestRunner().run(tests)
+    exit(0 if len(results.errors) + len(results.failures) == 0 else 1)
